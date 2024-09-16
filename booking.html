@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="auth.css">
+    <!-- Firebase SDK -->
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div id="nav">
+        <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="" />
+        <button id="home-button">Home</button>
+    </div>
+
+    <div class="body-container">
+        <h1>Driving Range</h1>
+
+        <div class="section-session-buttons">
+            <input type="radio" id="session55" name="session" value="55mins" checked>
+            <label for="session55">
+                Driving Range Session 55 Mins [Unlimited Balls]
+            </label>
+
+            <input type="radio" id="session115" name="session" value="115mins">
+            <label for="session115">
+                Driving Range Session 115 Mins [Unlimited Balls]
+            </label>
+        </div>
+
+        <div class="instruction">
+            <p>Please select the date and time you would like to book.</p>
+        </div>
+
+        <div class="section">
+            <label for="bays">No. of Bays:</label>
+            <select id="bays">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label for="date">Select a date:</label>
+            <input type="date" id="date">
+        </div>
+
+        <div class="section">
+            <label for="time">Select a time:</label>
+            <select id="time">
+                <option value="9:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="1:00">01:00 PM</option>
+                <option value="2:00">02:00 PM</option>
+                <option value="3:00">03:00 PM</option>
+                <option value="4:00">04:00 PM</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <input type="button" value="CONFIRM" id="confirm-button">
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div id="nav">
+        <img
+          src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg"
+          alt=""
+        />
+
+        <button id="home-button">Home</button>
+    </div>
+
+    <div class="signup">
+        <h1>Create an Account</h1>
+        <form id="signup-form">
+            <fieldset>
+                <legend>Login Details</legend>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Your Personal Details</legend>
+                <div class="form-group">
+                    <label for="firstname">Firstname: </label>
+                    <input type="text" id="firstname" name="firstname" required placeholder="Firstname">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Surname: </label>
+                    <input type="text" id="surname" name="surname" required placeholder="Surname">
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile phone: </label>
+                    <input type="text" id="mobile" name="mobile" required placeholder="Mobile">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Your Address</legend>
+                <div class="form-group">
+                    <label for="address">Address Line 1: </label>
+                    <input type="text" id="address" name="address" required placeholder="First line of address">
+                </div>
+                <div class="form-group">
+                    <label for="city">Town / City: </label>
+                    <input type="text" id="city" name="city" required placeholder="City">
+                </div>
+                <div class="form-group">
+                    <label for="postcode">Post Code: </label>
+                    <input type="text" id="postcode" name="postcode" required placeholder="Post code">
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <button type="submit">REGISTER</button>
+            </div>
+        </form>
+
+        <!-- Add id attribute for JS navigation to login -->
+        <p>Already have an account? <a id="loginLink" href="#">Login</a></p>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
