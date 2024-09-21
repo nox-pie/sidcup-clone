@@ -123,3 +123,31 @@ document.querySelector('.account').addEventListener('click', function() {
 document.querySelector('.book').addEventListener('click', function() {
   window.location.href = 'booking.html';
 })
+
+
+
+
+        // <-----Popup Functionality----->
+
+var navLinks = document.querySelectorAll("#nav a");
+navLinks.forEach(function(link) {
+    link.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        document.getElementById('popup-message').innerText = 'COMING SOON :)';
+        document.getElementById('popup').style.display = 'flex'; // Show the popup
+    });
+});
+
+// Close popup functionality
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none'; // Hide the popup
+});
+
+// Optional: Close popup when clicking outside of it
+window.onclick = function(event) {
+    const popup = document.getElementById('popup');
+    if (event.target === popup) {
+        popup.style.display = 'none'; // Hide the popup
+    }
+};
+

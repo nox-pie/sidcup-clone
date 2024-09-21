@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; 
+    overflow-x: hidden;
 }
 
 #nav {
@@ -16,9 +17,9 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 0 120px;
-    gap: 50px;
-    justify-content: flex-start;
+    padding: 0 20px; /* Adjust as needed */
+    gap: 20px; /* Adjust as needed */
+    justify-content: flex-start; /* This keeps items to the left */
     z-index: 999;
     border-bottom: 2px solid greenyellow;
     position: absolute; 
@@ -47,13 +48,15 @@ body {
     border-radius: 15px;
     width: 100px;
     height: 50px;
-    margin-left: 950px;
+    margin-left: auto; /* This will push the button to the right */
+    margin-right: 60px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
 }
+
 
 #home-button:hover {
     transform: scale(1.1);
