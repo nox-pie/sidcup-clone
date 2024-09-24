@@ -112,7 +112,6 @@ gsap.from("#page4 h1", {
 });
 
 
-
 // Go to Account Page
 document.querySelector('.account').addEventListener('click', function() {
   const username = checkLoginStatus();

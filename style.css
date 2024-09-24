@@ -9,7 +9,7 @@
 html,
 body {
   height: 100%;
-
+  overflow-x: hidden;
   width: 100%;
 }
 *::selection {
@@ -76,7 +76,7 @@ body {
   position: absolute;
   top: 50%;
   right: 20px;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
 }
 
 .book, .account {
@@ -86,7 +86,7 @@ body {
   border-radius: 50%;
   width: 100px; 
   height: 100px; 
-  font-size: 16px; 
+  font-size: 75%; 
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -94,6 +94,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 15px;
 }
 
 .book:hover, .account:hover {
@@ -124,7 +125,7 @@ body {
   .book, .account {
     width: 70px; 
     height: 70px; 
-    font-size: 12px;
+    /* font-size: 12px; */
   }
 }
 
@@ -248,7 +249,6 @@ video {
 #about-us {
   height: 40vh;
   width: 100%;
-  /* background-color: red; */
   display: flex;
   padding: 0 50px;
   align-items: center;
@@ -277,7 +277,6 @@ video {
 }
 
 #cards-container {
-  /* background-color: red; */
   height: 60vh;
   display: flex;
   align-items: center;
@@ -289,7 +288,6 @@ video {
 .card {
   height: 80%;
   width: 24%;
-  /* background-color: blue; */
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -497,14 +495,6 @@ video {
 
 
 
-
-
-
-
-
-
-
-
               /* <-----Popup Styling-----> */
 
 .popup {
@@ -577,4 +567,510 @@ video {
   color: #fff;
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Responsive Styles for max-width 480px */
+@media (max-width: 480px) {
+  #cursor {
+    height: 15px;
+    width: 15px;
+  }
+
+  #cursor-blur {
+    height: 300px;
+    width: 300px;
+    filter: blur(60px);
+  }
+
+  #nav {
+    height: 90px;
+    padding: 0 20px;
+    gap: 10px; 
+  }
+
+  #nav img {
+    height: 40px;
+  }
+
+  #nav a {
+    font-size: 2.5vw; 
+  }
+
+  #nav-buttons {
+    top: 150%;
+    gap: 5px; 
+  }
+
+  .book, .account {
+    border-radius: 5px;
+    /* font-size:10px; */
+    border: 2px solid #95c11e;
+  }
+
+  #page1 h1 {
+    font-size: 10vw;
+  }
+
+  #page1 h2 {
+    font-size: 20px;
+  }
+
+  #page1 p {
+    font-size: 4vw;
+    width: 90%; 
+  }
+
+  #scroller h4 {
+    font-size: 60px;
+  }
+
+  #about-us {
+    flex-direction: column;
+    height: auto;
+    padding: 0 20px;
+    gap: 15px; 
+  }
+
+  #about-us img {
+    height: 150px;
+    width: 150px;
+  }
+
+  #about-us-in {
+    width: 100%;
+  }
+
+  #about-us-in h3 {
+    font-size: 40px;
+  }
+
+  #about-us-in p {
+    font-size: 16px;
+  }
+
+  #cards-container {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  .card {
+    width: 90%;
+    height: 200px;
+  }
+
+  .overlay h4 {
+    font-size: 24px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+  }
+
+  #green-div {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  #green-div h4 {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #green-div img {
+    width: 50px;
+  }
+
+  #page3 p {
+    font-size: 20px;
+    line-height: 28px;
+    width: 90%; 
+    text-align: center; 
+  }
+
+  #page4 {
+    flex-direction: column;
+    gap: 15px; 
+  }
+
+  #page4 h1 {
+    font-size: 12vw;
+    top: -50%;
+    text-align: center; 
+  }
+
+  .elem {
+    width: 80%;
+    height: 200px;
+  }
+
+  .elem h2 {
+    font-size: 6vw;
+  }
+
+  #footer {
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #footer img {
+    width: 80%; 
+  }
+
+  #f2 h3,
+  #f3 h3,
+  #f4 h4 {
+    font-size: 2vw;
+    text-align: center;
+  }
+}
+
+
+
+
+/* Responsive Styles for max-width 768px */
+@media (max-width: 768px) {
+  #cursor {
+    height: 20px; 
+    width: 20px;
+  }
+
+  #cursor-blur {
+    height: 350px; 
+    width: 350px;
+    filter: blur(50px); 
+  }
+
+  #nav {
+    height: 100px; 
+    padding: 0 30px;
+    gap: 15px; 
+  }
+
+  #nav img {
+    height: 60px;
+  }
+
+  #nav a {
+    font-size: 2vw; 
+  }
+
+  #nav-buttons {
+    top: 160%; 
+    gap: 10px; 
+  }
+
+  .book, .account {
+    border-radius: 8px; 
+    /* font-size: 12px;  */
+    border: 2px solid #95c11e;
+    padding: 8px 12px; 
+  }
+
+  #page1 h1 {
+    font-size: 8vw; 
+  }
+
+  #page1 h2 {
+    font-size: 25px; /* Increased font size */
+  }
+
+  #page1 p {
+    font-size: 3vw; 
+    width: 85%; 
+  }
+
+  #scroller h4 {
+    font-size: 75px; 
+  }
+
+  #about-us {
+    flex-direction: column;
+    height: auto;
+    padding: 0 30px; /* Increased padding */
+    gap: 20px; 
+  }
+
+  #about-us img {
+    height: 200px; /* Larger images for better visibility */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  #about-us-in {
+    width: 100%;
+  }
+
+  #about-us-in h3 {
+    font-size: 36px; /* Increased font size */
+  }
+
+  #about-us-in p {
+    font-size: 18px; /* Increased font size */
+  }
+
+  #cards-container {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .card {
+    width: 85%; /* Adjusted width for better fit */
+    height: 220px; /* Slightly larger card height */
+  }
+
+  .overlay h4 {
+    font-size: 26px; /* Increased overlay font size */
+  }
+
+  .overlay p {
+    font-size: 16px; /* Increased overlay paragraph size */
+  }
+
+  #green-div {
+    flex-direction: column;
+    height: auto;
+    padding: 15px; /* Adjusted padding */
+  }
+
+  #green-div h4 {
+    font-size: 25px; /* Increased font size */
+    line-height: 28px; /* Adjusted line height */
+    width: 100%;
+    text-align: center;
+  }
+
+  #green-div img {
+    width: 50px; 
+  }
+
+  #page3 p {
+    font-size: 22px; /* Increased font size */
+    line-height: 30px;
+    width: 90%; 
+    text-align: center; 
+  }
+
+  #page4 {
+    flex-direction: column;
+    gap: 20px; 
+  }
+
+  #page4 h1 {
+    font-size: 10vw; /* Responsive font size */
+    top: -65%;
+    text-align: center; 
+  }
+
+  .elem {
+    width: 80%;
+    height: 220px; /* Increased height */
+  }
+
+  .elem h2 {
+    font-size: 7vw; /* Increased font size */
+  }
+
+  #footer {
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px;
+    align-items: center; 
+  }
+
+  #footer img {
+    width: 80%; 
+  }
+
+  #f2 h3,
+  #f3 h3,
+  #f4 h4 {
+    font-size: 2vw; /* Adjusted font size */
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+body {
+  overflow-x: hidden; 
+}
+/* Responsive Styles for max-width 375px */
+@media (max-width: 375px) {
+  #cursor {
+    height: 12px; 
+    width: 12px;
+  }
+
+  
+  
+
+  #cursor-blur {
+    height: 250px; 
+    width: 250px;
+    filter: blur(50px);
+  }
+
+  #nav {
+    height: 80px; 
+    padding: 0 15px;
+    gap: 5px; 
+  }
+
+  #nav img {
+    height: 45px; 
+  }
+
+  #nav a {
+    font-size: 2.5vw; 
+  }
+
+  #nav-buttons {
+    top: 170%; 
+    gap: 5px; 
+  }
+
+  .book, .account {
+    border-radius: 4px; 
+    /* font-size: 65%;  */
+    border: 2px solid #95c11e;
+    padding: 5px 8px; 
+   
+  }
+
+  #page1 h1 {
+    font-size: 9vw;
+  }
+
+  #page1 h2 {
+    font-size: 18px; 
+  }
+
+  #page1 p {
+    font-size: 3.5vw; 
+    width: 90%; 
+  }
+
+  #scroller h4 {
+    font-size: 40px; 
+  }
+
+  #about-us {
+    flex-direction: column;
+    height: auto;
+    padding: 0 15px; 
+    gap: 10px; 
+  }
+
+  #about-us img {
+    height: 120px; 
+    width: auto; 
+  }
+
+  #about-us-in {
+    width: 100%;
+  }
+
+  #about-us-in h3 {
+    font-size: 30px; 
+  }
+
+  #about-us-in p {
+    font-size: 14px; 
+  }
+
+  #cards-container {
+    flex-direction: column;
+    height: auto;
+    gap: 10px; 
+  }
+
+  .card {
+    width: 90%; 
+    height: 180px; 
+  }
+
+  .overlay h4 {
+    font-size: 20px;
+  }
+
+  .overlay p {
+    font-size: 12px; 
+  }
+
+  #green-div {
+    flex-direction: column;
+    height: auto;
+    padding: 10px; 
+  }
+
+  #green-div h4 {
+    font-size: 14px; 
+    line-height: 22px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #green-div img {
+    width: 40px; 
+  }
+
+  #page3 p {
+    font-size: 18px; 
+    line-height: 24px; 
+    width: 90%; 
+    text-align: center; 
+  }
+
+  #page4 {
+    flex-direction: column;
+    gap: 10px; 
+  }
+
+  #page4 h1 {
+    font-size: 9vw; 
+    top: -32%;
+    text-align: center; 
+  }
+
+  .elem {
+    width: 90%;
+    height: 180px; 
+  }
+
+  .elem h2 {
+    font-size: 5vw;
+  }
+
+  #footer {
+    flex-direction: row; 
+    gap: 10px;
+    padding: 15px; 
+    align-items: center; 
+  }
+
+  #footer img {
+    width: 90%; 
+  }
+
+  #f2 h3,
+  #f3 h3,
+  #f4 h4 {
+    font-size: 2.5vw; 
+    text-align: center;
+  }
 }
