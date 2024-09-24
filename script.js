@@ -113,9 +113,14 @@ gsap.from("#page4 h1", {
 
 
 
-// Go to Login Page
+// Go to Account Page
 document.querySelector('.account').addEventListener('click', function() {
-  window.location.href = 'login.html';
+  const username = checkLoginStatus();
+  if (username) {
+      showAccountPopup(username);
+  } else {
+      window.location.href = 'login.html';
+  }
 });
 
 
@@ -150,4 +155,37 @@ window.onclick = function(event) {
         popup.style.display = 'none'; // Hide the popup
     }
 };
+
+// Check login status in localStorage
+function checkLoginStatus() {
+  return localStorage.getItem('username'); // Assume 'username' is saved when the user logs in
+}
+
+// Function to show the account popup
+function showAccountPopup(username) {
+  const popupMessage = document.getElementById('popup-message');
+  popupMessage.innerHTML = `<strong>Welcome, ${username}!</strong><br><button id="signout-btn">Sign out</button>`;
+  document.getElementById('popup').style.display = 'flex';
+
+  // Sign out functionality
+  document.getElementById('signout-btn').addEventListener('click', function() {
+      localStorage.removeItem('username'); // Clear login info
+      window.location.reload(); // Reload page to reset state
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

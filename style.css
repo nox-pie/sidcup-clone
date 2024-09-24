@@ -531,7 +531,7 @@ video {
   margin: auto;
 }
 
-.close-btn {
+#close-btn {
   background: none;
   border: none;
   color: #95c11e; 
@@ -550,4 +550,31 @@ video {
 #popup-message {
   color: #fff;
   font-size: 40px; 
+}
+
+/* Style for the Sign Out button */
+#signout-btn {
+  background-color: #95c11e;   
+  color: black;               
+  font-size: 16px;             
+  padding: 10px 20px;         
+  border: none;               
+  border-radius: 5px;          
+  cursor: pointer;             
+  margin-top: 20px;            
+  text-transform: uppercase;   
+  display: inline-block;       
+  transition: background-color 0.3s ease; 
+}
+
+#signout-btn:hover {
+  background-color: darkgreen;  
+  color: #fff;                
+}
+
+/* Optional: add some spacing if needed between message and the button */
+#popup-message strong {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
